@@ -1,0 +1,21 @@
+{
+  "name": "Tab Switcher",
+  "manifest_version": 2,
+  "version": "0.2",
+  "commands": {
+    "activate": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      },
+      "description": "Switch between tabs in chrome"
+    }
+  },
+  "permissions": ["tabs", "activeTab"],
+  "web_accessible_resources": [
+    "style.css"
+  ],
+  "background": {
+    "scripts": ["test.js"],
+    "persistent": false
+  }
+}
