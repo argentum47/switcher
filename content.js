@@ -92,13 +92,13 @@ function init(tabs) {
   }));
 
   function filterList(query) {
-    console.log("query", query);
     var filtered = tabs;
     if(query) {
+      query = query.toLowerCase()
       filtered = tabs.map(function(tab) {
         return levinstheiner(query, tab)
       }).sort(function(tab1, tab2) {
-        return tab1.score - tab2.score
+        return tab2.score - tab1.score
       })
 
     }
@@ -188,7 +188,7 @@ function levinstheiner(str, tab) {
   }
 
   tab.score = matrix[word.length][str.length];
-  console.log(word, str, tab.score)
+
   return tab;
 }
 
